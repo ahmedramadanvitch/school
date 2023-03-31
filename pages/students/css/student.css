@@ -1,0 +1,275 @@
+body{
+    /* font-family: 'Cairo', sans-serif; */
+    /* font-family: 'El Messiri', sans-serif; */
+    font-family: 'Changa', sans-serif !important;
+    direction: rtl;
+}
+*{
+    transition:all .3s linear !important;
+}
+:root{
+    --dark-color: #19283f;
+    --text-color: #a4a4a4;
+    --bg-orange : #df764e;
+    --bg-blue : #44c1e0;
+    --bg-green : #6ab78a;
+    --bg-yellow : #e0b84e;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none !important;
+    width: fit-content;
+}
+.main-hr{
+    width: 120px;
+    margin: 10px auto;
+    color: var(--text-color);
+    height: 3px !important;
+}
+#pre-loader{
+    background-color: #000;
+    /* background-image: url(../../../imgs/pre-loading-2.gif); */
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 1000000;
+    transition: all .3s linear;
+}
+/* start nav */
+.navbar{
+    position: fixed !important;
+    align-items: center;
+    z-index: 11;
+    width: 100%;
+    background-color: #101f2e79 !important;
+}
+.navbar .navbar-brand{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffc423;
+}
+.navbar .nav-link{
+    color: var(--bg-yellow);
+}
+.navbar .nav-link:hover{
+    color: white;
+    transform: scale(1.2, 1.2);
+}
+.navbar .navbar-toggler{
+    color: var(--bg-yellow) !important;
+}
+/* end nav */
+
+/* start landing */
+.landing{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../imgs/land1.jpg2.webp);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.landing::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #00000048;
+}
+.landing form{
+    position: relative;
+    background-color: #101f2e88;
+    width: 40%;
+    top: 100px;
+    border-radius: 50px;
+    display: block;
+    margin: auto;
+    z-index: 100;
+}
+.landing form:hover{
+        background-color: #101f2ebd;
+}
+.landing form .fa-graduation-cap{
+    color: var(--bg-yellow);
+    cursor: pointer;
+    transition: all .5s linear;
+    animation-name: rotate-icon-contact;
+    animation-timing-function: linear;
+    animation-duration: .5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes rotate-icon-contact {
+    0%{
+        transform: rotate(-10deg);
+        opacity: .5;
+    }
+    100%{
+        transform: rotate(10deg);
+        opacity: 1;
+    }
+}
+.landing form h1{
+    color: var(--bg-yellow);
+}
+.landing form .form-control:focus {
+    color: var(--bg-orange);
+    background-color: #fff !important;
+    border-color: transparent !important;
+    box-shadow: 0 0 0 .25rem rgba(255, 255, 255, 0);
+    outline: 0;
+}
+/* progress color and use in js */
+.landing form .progress-text{
+    width: 0px;
+    height: 4px;
+    background-color: var(--green-color);
+    display: block;
+    position: relative;
+    top: -3px;
+    transition: 1s;
+    border-radius:5px;
+}
+.landing form .progress-email{
+    width: 0px;
+    height: 4px;
+    background-color: var(--green-color);
+    display: block;
+    position: relative;
+    top: -3px;
+    left: 0px;
+    transition: 1s;
+    border-radius:10px;
+}
+.landing form .progress-password{
+    width: 0px;
+    height: 4px;
+    background-color: var(--green-color);
+    display: block;
+    position: relative;
+    top: -3px;
+    transition: 1s;
+    border-radius:5px;
+  }
+.landing form .progress-phone{
+    width: 0px;
+    height: 4px;
+    background-color: var(--green-color);
+    display: block;
+    position: relative;
+    top: -3px;
+    transition: 1s;
+    border-radius:5px;
+}
+.landing form button[type="submit"]{
+    background-color: var(--bg-yellow) !important;
+    border-color: var(--bg-yellow) !important;
+}
+.btn-primary:focus {
+    color: #fff;
+    background-color: var(--green-color) !important;
+    border-color: var(--green-color) !important;
+    box-shadow: 0 0 0 0.25rem #00968783;
+}
+@media (min-width : 768px) and (max-width : 991px){
+    .landing form{
+        width: 70%;
+    }
+}
+@media (max-width: 767px){
+    .landing{
+        background-image: url(../imgs/about2.jpg);
+        background-position: top center !important;
+    }
+    .landing form{
+        width: 100%;
+        top: 130px;
+    }
+}
+@media (min-width: 992px) {
+    .landing form{
+        width: 40%;
+        margin: 0 !important;
+        left: 0px;
+    }
+}
+/* End landing */
+
+/* start footer */
+footer{
+    background-image: url(../imgs/about-background1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    animation-name: change-background;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+}
+footer::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(2, 22, 39, 0.932);
+    z-index: 1;
+}
+@keyframes change-background{
+    0%{
+        background-image: url(../../../imgs/about-background1.jpg);
+    }
+
+    100%{
+        background-image: url(../../../imgs/about-background2.jpg);
+    }
+}
+footer .container{
+    position: relative;
+    z-index: 222;
+}
+footer .container .fa-school-flag{
+    color: var(--bg-yellow);
+    cursor: pointer;
+}
+footer .container .fa-school-flag:hover{
+    color: rgb(255, 208, 0);
+
+}
+footer h1 a{
+    color: var(--bg-yellow) !important;
+}
+footer .address{
+    margin-right: -40px;
+}
+footer .address ul li i{
+    color: var(--bg-yellow);
+
+    width: 50px;
+}
+footer .address ul li:hover i{
+    color: gray;
+
+}
+footer .address ul li:hover p{
+    color: var(--bg-yellow);
+}
+footer .created:hover i{
+    color: red;
+}
+/* End footer */
